@@ -1,0 +1,109 @@
+{% extends './base.html' %}
+
+
+{% block title %} Nueva Consulta {% endblock %}
+
+
+{% block container %}
+
+<div class="register">
+    <div class="form-container-consulta">
+        <div class="main-title">
+            <h1 class="title">Nueva Consulta</h1>
+        </div>
+        <div class="personal-information">
+           
+            <form action="" class="form" method="post">
+
+                {{ frm.hidden_tag() }}
+
+
+                {{ frm.id_cita }}
+                <div class="top-form">
+                    <p>
+                        {{ frm.hora.label }}
+                        {{ frm.hora }}
+                        {% for error in frm.hora.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    </p>
+
+                    <p>
+                        {{ frm.peso.label }}
+                        {{ frm.peso }}
+                        {% for error in frm.peso.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    </p>
+
+                    <p>
+                        {{ frm.estatura.label }}
+                        {{ frm.estatura }}
+                        {% for error in frm.estatura.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    </p>
+
+                    <p>
+                        {{ frm.ocupacion.label }}
+                        {{ frm.ocupacion }}
+                        {% for error in frm.ocupacion.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    </p>
+
+                    <p>
+                        {{ frm.motivoconsulta.label }}
+                        {{ frm.motivoconsulta }}
+                        {% for error in frm.motivoconsulta.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    </p>
+                </div>
+                <div class="bottom-form" >
+                    <p class="tamano">
+                        {{ frm.diagnostico.label }}
+                        {{ frm.diagnostico }}
+                        {% for error in frm.diagnostico.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    </p>
+
+                    <p class="tamano">
+                        {{ frm.comentariomedico.label }}
+                        {{ frm.comentariomedico }}
+                        {% for error in frm.comentariomedico.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    </p>
+                </div>
+
+                <br>
+                <p class="mensajesV"> <strong>{{ mensaje }}</strong></p>
+                {{ frm.guardar }}
+
+                
+
+            </form>
+
+            <a href="{{ '/pacientes_asignados' }}"><input type="submit" value="Atrás" class="btn_back_nueva_consulta"
+                    style="width: 100px;"></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

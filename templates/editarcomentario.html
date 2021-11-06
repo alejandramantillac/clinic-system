@@ -1,0 +1,47 @@
+{% extends './base.html' %}
+
+
+{% block title %} Editar Comentario {% endblock %}
+
+
+{% block container %}
+
+<div class="register">
+    <div class="form-container-editar-comentario">
+
+        <div class="main-title">
+            <h1 class="title">Editar Comentario</h1>
+        </div>
+
+        <div class="personal-information">
+
+            
+
+            <form action="" class="form" method="post"> 
+
+                {{ frm.hidden_tag() }}
+
+                <p >
+                    {{ frm.comentariomedico.label }}
+                    {{ frm.comentariomedico }}
+                    {% for error in frm.comentariomedico.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+                <br>
+
+                {{ frm.guardar }}
+
+                <p class="mensajesV"> <strong>{{ mensaje }}</strong></p>  
+
+            </form>
+
+            <a href="{{ '/pacientes_atendidos' }}"><input type="submit" value="Atrás" class="btn_back_editar_comentario"
+                    style="width: 100px;"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

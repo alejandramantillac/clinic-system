@@ -1,0 +1,67 @@
+{% extends './base.html' %}
+
+
+{% block title %} Iniciar Sesión {% endblock %}
+
+
+{% block container %}
+
+<div class="login">
+	<div class="form-container-login">
+		<div class="main-title">
+			<h1 class="title">Iniciar sesión</h1>
+		</div>
+		<div class="contenedor login " style="background-color: transparent;">
+
+			<form action="login" class="form" method="post">
+
+				{{ frm.hidden_tag() }}
+
+				<div class="contenedor-login-p" >
+					<p >
+						{{ frm.tipousuario.label }}
+						{{ frm.tipousuario }}
+						{% for error in frm.tipousuario.errors %}
+					<div>
+						{{ error }}
+					</div>
+					{% endfor %}
+					</p>
+					<br>
+
+					<p placeholder="correo">
+						{{ frm.correo.label }}
+						{{ frm.correo }}
+						{% for error in frm.correo.errors %}
+					<div>
+						{{ error }}
+					</div>
+					{% endfor %}
+					</p>
+
+					<br>
+
+					<p>
+						{{ frm.contrasena.label }}
+						{{ frm.contrasena }}
+						{% for error in frm.contrasena.errors %}
+					<div>
+						{{ error }}
+					</div>
+					{% endfor %}
+					</p>
+				</div>
+
+				<br>
+				<div class="login-button-1">{{ frm.iniciarsesion }} </div>
+				<br>
+
+				<p class="mensajesR">{{ mensaje }}</p>
+
+				<div class="password-register">¿No tienes cuenta? <a href="{{ '/registropaciente' }}">Regístrate</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

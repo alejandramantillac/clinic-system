@@ -1,0 +1,121 @@
+{% extends './base.html' %}
+
+
+{% block title %} Perfil de Administrador {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	
+	<div class="form-container-administrador">
+		<div class="titulo_perfil_usuario">
+			<h1 class="title"> Perfil de Administrador  <br> Bienvenido a la Dashboard:   {{ session["nombre"] }}</h1>
+		</div>
+		
+	<div >
+		<div style="margin: 20px; position:relative; left:20px "> 
+			<a href="{{ '/gestionar_usuarios_admin' }}"><input type="submit" value="Gestión de Usuarios"
+					class="btn_perfiladmin" style="width: 250px;"></a>
+			<a href="{{ '/gestionar_citas_admin' }}"><input type="submit" value="Gestión de citas"
+					class="btn_perfiladmin" style="width: 250px;"></a>
+			<a href="{{ '/gestionar_historia_clinica_admin' }}"><input type="submit" value="Historias Clinicas"
+					class="btn_perfiladmin" style="width: 250px;"></a>
+			
+
+		</div >
+	</div>
+
+		<div class="menad" >
+
+			
+			
+			<span  class="perfilad" style="background-color: rgb(63, 75, 182);"> Número De Citas Creadas : {% for citamedica in rows5 %} {{ citamedica [0] }} {% endfor %}</span>
+			<span  class="perfilad"  style="background-color: rgb(122, 158, 86);">   Número De Usuarios Registrados: {% for usuario in rows2 %} {{ usuario [0] }} {% endfor %}</span>
+			
+			<br>
+			<br>
+			<br>
+			<span  class="perfilad" style="background-color: rgb(170, 120, 56);"> Número De Citas Asignadas: {% for asignada in rows6 %} {{ asignada [0] }} {% endfor %}</span>
+			
+			<span  class="perfilad" style="background-color: rgb(71, 147, 160);"> Número De Médicos Registrados: {% for medico in rows4 %} {{ medico [0] }} {% endfor %} </span>
+
+			<br>
+			<br>
+			<br>
+
+			
+
+			<span  class="perfilad" style="background-color: rgb(192, 40, 146);"> Número De Citas Sin Signar: {% for sinasig in rows7 %} {{ sinasig [0] }} {% endfor %}</span>
+			<span  class="perfilad" style="background-color: rgb(146, 127, 73);"> Número De Pacientes Registrados: {% for paciente in rows3 %} {{ paciente [0] }} {% endfor %}</span>
+			<br>
+			<br>
+			<br>
+			<span  class="perfilad" style="background-color: rgb(36, 167, 32);"> Número De Citas Atendidas: {% for atendido in rows8 %} {{ atendido [0] }} {% endfor %}</span>
+
+			<span  class="perfilad" style="background-color: rgb(133, 47, 47);"> Número De Administradores Registrados: {% for administrador in rows9 %} {{ administrador [0] }} {% endfor %}</span>
+			
+		</div>
+
+		<div class="" >
+			<h1 style="text-align: center; color:white; background-color: var(--blue-color)">-</h1>
+
+			<div style="width: 10%; float:left; margin:40px ">
+				<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5812119705733!2d-74.8051541857115!3d10.994949458129838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d74a16e305f%3A0xabe031988ae168d3!2sClinica%20General%20del%20Norte!5e0!3m2!1ses!2sco!4v1633554565279!5m2!1ses!2sco"
+				width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+
+		<div id="div1" class="tabl">
+			<table class="solicitar_cita" style="margin: 80px;">
+				<caption><h1>Listado De Usuarios</h1></caption>
+				
+
+				<thead>
+					<tr>
+						
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">TIPO DE DOCUMENTO </h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">NÚMERO DE DOCUMENTO </h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">NOMBRE</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">TIPO DE USUARIO</h2>
+						</th>
+						
+					</tr>
+				</thead>
+		
+				<tbody>
+		
+					{% for cita in rows %}
+					<tr>
+						<td>{{ cita["tipodocumento"] }}</td>
+						<td>{{ cita["numerodocumento"] }}</td>
+						<td>{{ cita["nombre"] }}</td>
+						<td>{{ cita["tipousuario"] }}</td>
+						
+					</tr>
+					{% endfor %}
+		
+				</tbody>
+		
+			</table>
+		</div>
+							
+
+		</div>
+		
+	
+
+
+
+	</div>
+
+	<a href="{{ '/logout' }}"><input type="submit" value="Cerrar Sesión" class="btn_perfiladmin" style="background-color: rgb(240, 65, 65);  width: 150px; "></a>
+</div>
+{% endblock %}

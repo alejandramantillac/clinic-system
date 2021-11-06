@@ -1,0 +1,88 @@
+{% extends './base.html' %}
+
+
+{% block title %} Historia Clínica {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container-historia-clinica">
+		<div class="titulo_perfil_usuario">
+			<h1>Historia Clínica </h1>
+						
+
+		</div>
+		<table class="tablalistadocita" >
+			<thead>
+				<tr>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">FECHA </h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">MÉDICO</h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">PESO</h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">ESTATURA</h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">MOTIVO CONSULTA </h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">DIAGNOSTICO </h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">COMENTARIO MEDICO </h2>
+					</th>
+
+					{% if session["tipousuario"] == 'Paciente' %}
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">CALIFICAR CITA </h2>
+					</th>
+					{% endif %}
+				</tr>
+			</thead>
+			<tbody>
+				{% for cita in rows %}
+				<tr>
+					<td>{{ cita["fecha"] }}</td>
+					<td>{{ cita["nombre"] }}</td>
+					<td>{{ cita["peso"] }}</td>
+					<td>{{ cita["estatura"] }}</td>
+					<td>{{ cita["motivoconsulta"] }}</td>
+					<td>{{ cita["diagnostico"] }}</td>
+					<td>{{ cita["comentariomedico"] }}</td>
+
+					{% if session["tipousuario"] == 'Paciente' %}
+
+					{% if cita["calificacion"] == 0 %} 
+
+								<td><a href="/calificaratencion/{{ cita['id_cita'] }}">Ir a Calificar </a></td>
+						{% else %}  
+								<td>Calificada</td>
+						{% endif %} 
+
+						{% endif %}	
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		{% if   session["tipousuario"] == "Administrador" %} 
+		
+		<a href="javascript: history.go(-1)"><input type="submit" value="Atrás" class="btn_back_historia_clinica_2"
+				style="width: 100px;"></a>
+
+		{% endif %}		
+
+		{% if   session["tipousuario"] == "Paciente" %} 
+
+		<a href="{{ '/perfil_usuario_paciente' }}"><input type="submit" value="Atrás"class="btn_back_historia_clinica_3" style="width: 100px;"></a>
+
+		{% endif %}	
+	</div>
+</div>
+{% endblock %}

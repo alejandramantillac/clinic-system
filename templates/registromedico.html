@@ -1,0 +1,153 @@
+{% extends './base.html' %}
+
+
+{% block title %} Crear Médico {% endblock %}
+
+
+{% block container %}
+
+
+
+<div class="register">
+    <div class="form-container">
+        <h1 class="title" style="color: black;">Registro Usuario Médico</h1>
+
+
+
+        <form action="" class="form" method="post">
+
+            {{ frm.hidden_tag() }}
+
+
+
+            <p>
+                {{ frm.tipodocumento.label }}
+                {{ frm.tipodocumento }}
+                {% for error in frm.tipodocumento.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+
+            <p>
+                {{ frm.numerodocumento.label }}
+                {{ frm.numerodocumento }}
+                {% for error in frm.numerodocumento.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+
+
+            <p>
+                {{ frm.nombre.label }}
+                {{ frm.nombre }}
+                {% for error in frm.nombre.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+            <p>
+                {{ frm.correo.label }}
+                {{ frm.correo }}
+                {% for error in frm.correo.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+
+
+            <p>
+                {{ frm.fechanacimiento.label }}
+                {{ frm.fechanacimiento }}
+                {% for error in frm.fechanacimiento.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+            <p>
+                {{ frm.genero.label }}
+                {{ frm.genero }}
+                {% for error in frm.genero.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+            <p>
+                {{ frm.direccion.label }}
+                {{ frm.direccion }}
+                {% for error in frm.direccion.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+            <p>
+                {{ frm.telefono.label }}
+                {{ frm.telefono }}
+                {% for error in frm.telefono.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+
+            <p>
+                {{ frm.contrasena.label }}
+                {{ frm.contrasena }}
+                {% for error in frm.contrasena.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+
+            <p>
+                {{ frm.especialidad.label }}
+                {{ frm.especialidad }}
+                {% for error in frm.especialidad.errors %}
+            <div>
+                {{ error }}
+            </div> 
+            {% endfor %}
+            </p>
+
+            <p>
+                {{ frm.numeroregistro.label }}
+                {{ frm.numeroregistro }}
+                {% for error in frm.numeroregistro.errors %}
+            <div>
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+
+            <br>
+
+            {{ frm.enviar }}
+
+            <p class="mensajesv" style="color: rgb(25, 214, 25);" ><strong>{{ mensaje }}</strong></p>
+
+        </form>
+        <a href="{{ '/gestionar_usuarios_admin' }}"><input type="submit" value="Atras" class="btn_perfiladmin"
+                style="width: 100px;"></a>
+
+
+    </div>
+</div>
+{% endblock %}

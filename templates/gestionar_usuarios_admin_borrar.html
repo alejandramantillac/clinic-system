@@ -1,0 +1,55 @@
+{% extends './base.html' %}
+
+
+{% block title %} Gestión de Usuarios {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container">
+		<div class="titulo_perfil_usuario">
+			<h1>Gestión de Usuarios</h1>
+		</div>
+
+		<div class="form-containerAdmin" style="text-align: center;">
+			<h1>Esta seguro que desea eliminar el siguiente usuario?</h1>
+			<table class="tablacitasprogramadas">
+				<thead>
+					<tr>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">NUMERO DE DOCUMENTO</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">NOMBRE</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">TIPO DE USUARIO</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">ELIMINAR</h2>
+						</th>
+					</tr>
+
+				</thead>
+
+				<tbody>
+					{% for usu in rows %}
+					<tr>
+						<td>{{ usu["numerodocumento"] }}</td>
+						<td>{{ usu["nombre"] }}</td>
+						<td>{{ usu["tipousuario"] }}</td>
+						<td><a href="/eliminarusuario/{{ usu['id_usuario'] }}">Eliminar</a></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+
+			</table>
+			<a href="{{ '/gestionar_usuarios_admin' }}"><input type="submit" value="Atras" class="btn_perfiladmin"
+					style="width: 100px;"></a>
+		</div>
+	</div>
+	<br>
+	<br>
+</div>
+{% endblock %}

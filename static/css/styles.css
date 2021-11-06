@@ -1,0 +1,2013 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+	--blue-color: #58b6e2;
+	--blue-color-2: #009fd9;
+	--white-color: #FFF;
+	--grey-color: #555;
+    --text-input-field: #F7F7F7;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --mx: 24px;
+	--xxl: 32px;
+}
+
+body {
+    margin: 0;
+	padding: 0;
+	background: var(--white-color)  repeat-x left top;
+	font-family: 'Quicksand', sans-serif;
+	color: var(--grey-color);
+}
+
+/* Página de Home */
+.bodyhome{
+	background-color: var(--white-color);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.form-container .first-title h1 {
+	color: var(--blue-color);
+}
+/* Finaliza página de Home */
+
+h3 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+a {
+	text-decoration: none;
+	color: var(--blue-color);
+	font-weight: bold;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	background-color: var(--white-color);
+}
+
+/* Header */
+
+#header {
+	margin: 0 auto;
+	background:  no-repeat left top;
+	background-color: var(--white-color);
+}
+
+/* Logo */
+
+#logo {
+	margin: 0;
+	padding: 10px;
+	color: var(--blue-color);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+}
+
+#logo p {
+	margin: 0;
+	padding: 0;
+}
+
+#logo h1 {
+	letter-spacing: -1px;
+	font-size: 2.8em;
+}
+#logo img {
+	width: 240px;
+}
+
+#logo p {
+	float: left;
+	margin: 0;
+	padding: 90px 10px;
+	font: normal 14px Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+#logo a {
+	border: none;
+	background: none;
+	text-decoration: none;
+	color: var(--blue-color)
+}
+
+/* Finaliza Logo */
+
+/* Menu */
+
+#menu {
+	height: 50px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: var(--blue-color);
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 30px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	padding-left: 60px;
+	padding-right: 60px;
+	float: left;
+	height: 50px;
+	background:  no-repeat right top;
+}
+
+#menu a {
+	display: block;
+	margin-top: 10px;
+	margin-right: 3px;
+	padding: 7px 20px 7px 20px;
+	text-decoration: none;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: none;
+}
+
+#menu a:hover, #menu .current_page_item a {
+}
+
+#menu a:hover {
+	text-decoration: underline;
+
+}
+
+/* Final Menú */
+
+/* Página de Login */
+
+.form-container-login {
+	padding: 0;
+	margin: 50px;
+    width: 40%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+/* .form-container-login > * {
+    padding: 1em;
+} */
+
+.form-container-login .form {
+	color: var(--blue-color);
+}
+
+.form-container-login form .contenedor-login-p{
+	text-align: right;
+    margin: 0;
+	width: 100%;
+
+}
+
+div.login-button-1 {
+	padding: 0;
+}
+
+.contenedor-login-p input {
+	border-radius: 10px;
+	border: 1px solid #555555
+}
+
+.contenedor-login-p select {
+	border-radius: 10px;
+	border-color: 1px solid #555555
+}
+
+.form-container-login form select,
+.form-container-login form input {
+    width: 100%;
+    outline: 0;
+}
+
+.form-container-login form p {
+	text-align: start;
+}
+
+.form-container-login form .contenedor-login-p label {
+	font-size: var(--md);
+	font-weight: bold;
+}
+.form-container-login h1 {
+	color: var(--white-color);
+	font-size: var(--xxl);
+}
+.login-button-1 #iniciarsesion{
+    color: white;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 8px;
+    width: 102%;
+    font-size: var(--md);
+    font-weight: bold;
+    cursor: pointer;
+	padding: 5px;
+
+}
+
+.search-button #buscar{
+    color: white;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 8px;
+    width: 102%;
+    font-size: var(--md);
+    font-weight: bold;
+    cursor: pointer;
+	padding: 5px;
+	margin: 0;
+
+}
+
+
+/* Final Login */
+
+/* Página Registro */
+.form-container-register {
+	margin: 50px;
+    width: 70%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+
+.form-container-register form {
+	color: var(--blue-color);
+}
+
+.form-container-register form .contenedor-register-p{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: right;
+    margin: 20px;
+    padding: 1em;
+
+}
+
+.contenedor-register-p input {
+	border-radius: 10px;
+	border: 1px solid #555555
+}
+
+.contenedor-register-p select {
+	border-radius: 10px;
+	border-color: 1px solid #555555
+}
+
+.contenedor-register-p p {
+	text-align: start;
+}
+
+.form-container-register form select,
+.form-container-register form input {
+    width: 100%;
+    outline: 0;
+}
+
+.form-container form select, .form-container-register select, .form-container-login form select {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.form-container form input, .form-container-register form input, .form-container-login input {
+	font-family: 'Quicksand', sans-serif;
+	color: var(--grey-color)
+}
+
+.form-container-register form .contenedor-register-p label {
+	font-size: var(--md);
+	font-weight: bold;
+}
+.form-container-register h1 {
+	color: var(--white-color);
+	font-size: var(--xxl);
+}
+
+.form-container-register p {
+	margin: 20px;
+}
+.form-container-register #enviar{
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+/* Final Registro */
+
+/* Página Solicitar Citas  */
+.form-container-citas {
+	margin: 50px;
+    width: 70%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-citas > * {
+    padding: 1em;
+}
+
+.form-container-citas form {
+	font-size: var(--md);
+}
+
+.form-container-citas .form label {
+    margin: 0;
+    padding: 1em;
+}
+
+.form-container-citas form select,
+.form-container-citas form input {
+    width: 70%;
+    outline: 0;
+}
+
+
+.form-container-citas h1 {
+	color: var(--blue-color);
+}
+
+.form #buscar {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	background-color: var(--blue-color);
+	align-items: center;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	border-radius: 15px;
+	width: 100%;
+	cursor: pointer;
+	border: none;
+	padding: 10px;
+}
+
+h2{
+	text-align: center;
+	margin: 0;
+}
+/* Final Solicitar Citas  */
+
+/* Página Nueva Consulta */
+.form-container-consulta {
+	margin: 50px;
+    width: 70%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-consulta > * {
+    padding: 1em;
+}
+
+.form-container-consulta form {
+	color: var(--blue-color);
+}
+
+.personal-information form {
+	font-size: var(--md);
+}
+
+.personal-information form .top-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.form-container-consulta form .personal-information{
+	text-align: right;
+    margin: 20px;
+    padding: 1em;
+
+}
+
+.personal-information input {
+	border-radius: 10px;
+	border: 1px solid #555555
+}
+
+.personal-information select {
+	border-radius: 10px;
+	border-color: 1px solid #555555
+}
+
+.form-container-consulta form select,
+.form-container-consulta form input {
+    width: 100%;
+    outline: 0;
+}
+
+.form-container-consulta form .personal-information label {
+	font-size: var(--md);
+	font-weight: bold;
+}
+.form-container-consulta h1 {
+	color: var(--white-color);
+}
+
+.form-container-consulta p {
+	margin: 20px;
+}
+
+.form-container-consulta form .bottom-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.form-container-consulta form textarea {
+	border-radius: 10px;
+	width: 400px;
+	height: 100px;
+}
+
+.form-container-consulta #guardar{
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+.btn_back_nueva_consulta {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin-left: 65px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+/* Final Nueva Consulta */
+
+/* Página Crear cita nueva  */
+.form-container-cita-nueva > * {
+    padding: 1em;
+}
+
+.form-container-cita-nueva .main-title h1 {
+	color: var(--white-color);
+	margin: 0;
+}
+
+.form-container-cita-nueva {
+	margin: 50px;
+    width: 90%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+.form-container-cita-nueva .tablalistadocita {
+	margin-left: 55px;
+}
+
+.form-container-cita-nueva .history-container p {
+	font-size: var(--md);
+}
+
+.form-container-cita-nueva .history-container p input {
+	border-radius: 10px;
+    border: 1px solid #555555
+}
+
+.form-container-cita-nueva #crear{
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+.btn_back_nueva_cita {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin-left: 65px;
+	margin-bottom: 15px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+
+
+/* Final cita nueva */
+
+/* Página editar comentario */
+.btn_back_editar_comentario {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	padding: 0;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	margin-left: 60px;
+	margin-bottom: 15px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.form-container-editar-comentario {
+	margin: 50px;
+    width: 90%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+.form-container-editar-comentario .tablalistadocita {
+	margin-left: 55px;
+}
+
+.form-container-editar-comentario .personal-information * {
+    padding: 1em;
+}
+
+.form-container-editar-comentario .main-title * {
+    padding: 1em;
+}
+
+
+.form-container-editar-comentario .main-title h1 {
+	margin: 0;
+}
+
+.form-container-editar-comentario .personal-information p {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.form-container-editar-comentario .personal-information p label {
+	font-size: var(--md);
+}
+
+.form-container-editar-comentario .personal-information p textarea {
+	margin-left: 410px;
+	border-radius: 10px;
+	width: 300px;
+	height: 100px;
+}
+
+.form-container-editar-comentario #guardar{
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+	padding: 0;
+
+}
+/* Final editar comentario */
+
+/* Página pacientes atendidos */
+.btn_back_pacientes_atendidos {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	margin-left: 60px;
+	margin-bottom: 15px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.form-container-paciente .first-title h1 {
+	color: var(--blue-color);
+}
+
+.form-container-pacientes_atendidos {
+	margin: 50px;
+    width: 90%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+.form-container-pacientes_atendidos .tablalistadocita {
+	margin-left: 55px;
+}
+
+.form-container-pacientes_atendidos > * {
+    padding: 1em;
+}
+
+/* Final pacientes atendidos */
+
+/* Página pacientes asignados */
+.form-container-pacientes-asignados .tablalistadocita {
+	margin-left: 50px;
+}
+
+.btn_back_pacientes_asignados {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin-left: 65px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+/* Final pacientes asignados */
+
+/* Página historial clínico */
+.form-container-historial-clinico {
+	margin-left: 65px;
+}
+
+.btn_back_historial_clinico {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin-left: 85px;
+	margin-bottom: 15px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+/* Final historial clínico */
+.fondo {
+	background-color: white;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.register {
+	background-color: white;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.background-clinica {
+	background-color: white;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+}
+
+input.src {
+    padding: .5em;
+    margin: 1.8em;
+    outline: none;
+    font-size: 15px;
+    border-radius: 15px;
+    color: #444;
+    height: 15px;
+}
+
+.form-container {
+	margin: 50px;
+    width: 70%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+/* .form-container > * {
+    padding: 1em;
+} */
+
+.form-container .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-container .form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.form-container form select,
+.form-container form input {
+    width: 100%;
+    outline: 0;
+}
+
+.form-container h1 {
+	color: var(--white-color);
+}
+
+
+.logo {
+    width: 310px;
+    margin: 1em;
+	background-color: var(--white-color);
+}
+
+.title {
+	color: var(--white-color);
+    font-size: var(--xxl);
+	margin: 0;
+	padding: 5px;
+    text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: var(--lg);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.input {
+    border-radius: 8px;
+    font-size: var(--sm);
+    margin-bottom: 12px;
+}
+
+#document-type {
+    border:1px solid #555555;
+    font-size: var(--sm);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 4px;
+}
+p .account_exist {
+    text-align: end;
+}
+
+.register-bt {
+		align-items: center;
+		color: white;
+		background-color: #39414B;
+		border: none;
+		border-radius: 8px;
+		width: 50%;
+		font-size: var(--mx);
+		font-weight: bold;
+		cursor: pointer;
+		height: 40px;
+}
+
+
+p {
+    text-align: center;
+}
+
+p .account_exist {
+    text-align: end;
+    font-size: var(--sm);
+    list-style: none;
+    padding: 5px;
+}
+
+
+p #account_exist_2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.password-register {
+	color: var(--blue-color);
+	text-align: center;
+    font-size: var(--sm);
+    list-style: none;
+}
+
+.password-register a {
+    padding: 5px;
+}
+
+.password-register a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+#footer {
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	background-color: var(--blue-color);
+}
+
+#footer p {
+	padding-top: 30px;
+	line-height: normal;
+	font-size: 9px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+/* pagina actualizar datos */
+
+
+.botonactualizardatos {
+	align-items: center;
+	color: white;
+	background-color: #39414B;
+	border: none;
+	border-radius: 8px;
+	width: 50%;
+	font-size: var(--mx);
+	font-weight: bold;
+	cursor: pointer;
+	height: 40px;
+}
+
+
+/* Perfil Usuario Paciente */
+
+.menuizquierda{
+	background-color: #ffffff;
+	float: left;
+	width: 250px;
+	padding: 50px 30px 0 20px;
+	color: #787878;
+	font-size: 10px;
+
+
+
+}
+
+.colorletra{
+	color: rgb(255, 249, 249);
+}
+
+.perfil_usuario{
+
+position: relative;
+top: 0px;
+float: center;
+
+	}
+
+.titulo_perfil_usuario{
+	text-align: center;
+	font-size: var(--sm);
+	background-color: var(--blue-color);
+}
+
+.titulo_perfil_usuario h1 {
+	color: var(--white-color);
+	padding: 0;
+	margin: 0;
+}
+
+.boton_perfil_usuario{
+	border-color: rgb(255, 255, 255);
+	background-color: var(--blue-color);
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	height: 50px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	align-items: center;
+	border-radius: 15px;
+	width: 146%;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+
+}
+
+/* pagina detalle cita--------------------------------------------*/
+
+.centropagdetcita {
+	text-align: center;
+}
+
+
+.postdcita {
+	margin-bottom: 8px;
+	background:  repeat-y left top;
+
+}
+
+
+.negro1{
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: normal;
+	color: #000000;
+	font-size: 2.2em;
+
+}
+
+.negro2{
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: normal;
+	color: #000000;
+	font-size: 1.5em;
+
+}
+
+.tabladetacita, thead, th, tr, td {
+
+	align-items: center;
+	width: 80%;
+	border: solid 1px black;
+	border-collapse: collapse;
+	padding: 5px;
+	text-align: center;
+
+
+}
+
+.cabeceratabla{
+	background-color: var(--blue-color);
+
+}
+
+.letracabecetabla{
+	font-family: 'Quicksand', sans-serif;
+	font-size: var(--md);
+	color: #FFFFFF
+
+}
+
+.btndetallecita{
+
+	align-items: center;
+	color: white;
+	background-color: #39414B;
+	border: none;
+	border-radius: 8px;
+	width: 30%;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	height: 40px;
+
+
+}
+/* -------------------------------------------------------- */
+
+/* pagina cancelar cita */
+
+.caption{
+	margin: 10px;
+}
+
+/* pagina actualizar datos paciente -----------------------------------*/
+
+.register #enviar {
+	align-items: center;
+	color: white;
+	background-color: var(--blue-color);
+	border: none;
+	border-radius: 8px;
+	width: 40%;
+	font-size: var(--md);
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px;
+}
+
+
+.btn_actualizar_datos_paciente {
+		font-family: 'Quicksand', sans-serif;
+		text-align: center;
+		color: white;
+		background-color: var(--blue-color);
+		border: none;
+		border-radius: 8px;
+		font-size: 18px;
+		font-weight: bold;
+		cursor: pointer;
+		height: 35px;
+		margin: 20px;
+		position: relative;
+		left: 40px;
+}
+
+.form-container-actualizar-datos-paciente form input, .form-container-actualizar-datos-paciente form select{
+	border-radius: 10px;
+	border: 1px solid #555555;
+}
+.form-container-actualizar-datos-paciente #enviar {
+	width: 80%;
+	align-items: center;
+	color: white;
+	background-color: var(--blue-color);
+	border: none;
+	border-radius: 8px;
+	width: 40%;
+	font-size: var(--md);
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px;
+}
+.form-container-actualizar-datos-paciente form p  {
+	text-align: start;
+	font-weight: bold;
+}
+.form-container-actualizar-datos-paciente {
+	margin: 2.5em;
+	margin-bottom: 0;
+}
+
+/* Página historia clinica admin  */
+.form-container-gestion-historia-clinica {
+	margin: 50px;
+    width: 95%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-gestion-historia-clinica  .gestion-table{
+	border-collapse: collapse;
+}
+
+.form-container-gestion-historia-clinica  .gestion-table .encabezado{
+	background-color: var(--blue-color);
+	font-size: var(--md);
+}
+
+.form-container-gestion-historia-clinica > * {
+    padding: 1em;
+}
+/* Página historia clínica  */
+.btn_back_historia_clinica_3 {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	margin-left: 70px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.btn_back_historia_clinica {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.form-container-historia-clinica {
+	margin: 50px;
+    width: 90%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+.form-container-historia-clinica .tablalistadocita {
+	margin-left: 55px;
+	margin-top: 15px;
+}
+
+.form-container-historia-clinica > * {
+    padding: 1em;
+}
+
+.btn_back_historia_clinica_2 {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	margin-left: 570px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+/* Pagina cancelar cita-------------------------- */
+
+.btncancelarcita{
+
+	align-items: left;
+	color: white;
+	background-color: #1b2e4b;
+	border: none;
+	border-radius: 8px;
+	width: 40%;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	height: 40px;
+
+}
+
+/* Página calificar atención */
+#calificar {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 15px;
+	color: rgb(255, 255, 139);
+	margin: 10px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.form-container-calificar-atencion > * {
+    padding: 1em;
+}
+
+.form-container-calificar-atencion .main-title h1 {
+	color: var(--white-color);
+	margin: 0;
+}
+
+.form-container-calificar-atencion {
+	margin: 50px;
+    width: 90%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-calificar-atencion  p {
+	font-size: var(--md);
+}
+
+.form-container-calificar-atenciona p input {
+	border-radius: 10px;
+    border: 1px solid #555555
+}
+
+.form-container-calificar-atencion #calificar{
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 149);
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+.btn_back_calificar_atencion {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+/* Pagina conozcanos-------------------------- */
+
+.conozcanos{
+
+text-align: justify;
+font-size: 17px;
+}
+
+.conozcanos-container-2 {
+	margin-right: 70px;
+}
+
+.form-container-conozcanos-1 {
+	margin: 50px;
+    width: 70%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-conozcanos-1 > * {
+    padding: 1em;
+}
+
+.form-container-conozcanos {
+	margin-right: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-conozcanos > * {
+    padding: 1em;
+}
+
+
+
+
+
+/* Final conozcanos */
+
+/* Página Perfil Paciente */
+.form-container-paciente {
+	margin-top: 20px;
+	margin: 50px;
+    width: 80%;
+	height: 400px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-paciente > * {
+    padding: 1em;
+}
+
+.boton_perfil_usuario_paciente{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 50px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	align-items: center;
+	border-radius: 15px;
+	width: 150%;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.boton_perfil_usuario_paciente_cerrar{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(251, 153, 153);
+	background-color: #c32a2a;
+	height: 50px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	align-items: center;
+	border-radius: 15px;
+	width: 150%;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.form-container-citas .solicitar_cita tr {
+	font-size: var(--sm);
+}
+.form-container-citas form {
+	width: 100%;
+	align-items: center;
+
+}
+
+.form-container-citas form p input,
+.form-container-citas form p select {
+	border-radius: 10px;
+	border: solid 1px #555555;
+}
+
+.form-container-citas form label {
+	font-weight: bold;
+}
+
+.form-container-citas form input {
+	color: var(--grey-color);
+	font-family: 'Quicksand', sans-serif;
+}
+/* Final Perfil Paciente */
+
+/* Página perfil médico */
+.form-container-medico {
+	margin-top: 20px;
+	margin: 50px;
+    width: 80%;
+	height: 400px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-medico .first-title h1 {
+	color: var(--blue-color);
+}
+
+.form-container-medico > * {
+    padding: 1em;
+}
+
+.boton_perfil_usuario_medico{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 50px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	align-items: center;
+	border-radius: 15px;
+	width: 150%;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+
+.boton_perfil_usuario_medico_cerrar{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(251, 153, 153);
+	background-color: #c32a2a;
+	height: 50px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin: 10px;
+	align-items: center;
+	border-radius: 15px;
+	width: 150%;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}
+/* Final médico */
+
+/* Pagina C0ntactenos -----------------------*/
+
+
+.menuizquierda_contactenos{
+	background-color: #ffffff;
+	margin: 25px;
+	float: left;
+	width: 300px;
+	height: 400px;
+	padding: 10px 0px 0 50px;
+	color: #787878;
+	font-size: 14px;
+}
+
+.menuizquierda_contactenos p {
+	margin-top: 18px;
+	color: var(--blue-color);
+	text-align: start;
+	font-size: var(--lg);
+}
+
+
+.text_area{
+
+
+	resize: none;
+}
+
+.btn_Enviar_contactenos{
+
+	align-items: center;
+		color: white;
+		background-color: #707f92;
+		border: none;
+		border-radius: 8px;
+		width: 30%;
+		font-size:25px;
+		font-weight: bold;
+		cursor: pointer;
+		height: 50px;
+		padding: 10px;
+		margin: 20px;
+		position: relative;
+		left: -20px;
+
+}
+
+
+.form-contactenos {
+    width: 50%;
+
+
+}
+
+.txt-center {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+.rating {
+    width: 90px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+
+.rating > label {
+    float: right;
+    display: inline;
+    padding: 1;
+    margin: 1;
+    position: relative;
+    width: 1.5em;
+    cursor: pointer;
+    color: #000;
+}
+
+.rating > label:hover,
+.rating > label:hover ~ label,
+.rating > input.radio-btn:checked ~ label {
+    color: transparent;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > input.radio-btn:checked ~ label:before,
+.rating > input.radio-btn:checked ~ label:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+}
+
+
+
+
+/* Pagina contactenos */
+
+.contactenos{
+width: 220px;
+
+
+}
+
+/* Actualizar datos medico------------------------------------- */
+
+.cancel-button {
+	margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.cancel-bt {
+		align-items: center;
+		color: white;
+		background-color: #39414B;
+		border: none;
+		border-radius: 8px;
+		width: 50%;
+		font-size: var(--mx);
+		font-weight: bold;
+		cursor: pointer;
+		height: 40px;
+}
+
+.actualization-bt {
+    align-items: center;
+    color: white;
+    background-color: #39414B;
+    border: none;
+    border-radius: 8px;
+    width: 50%;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+}
+
+
+
+.login {
+	background-color: white;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+
+.login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: #39414B;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+
+
+.restore-button {
+    margin-top: 18px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: #39414B;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+
+.back-restore {
+    text-align: end;
+    font-size: var(--sm);
+    list-style: none;
+}
+
+.back-restore li {
+    padding: 5px;
+}
+
+.back-restore li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.gestion-container {
+    margin: 50px;
+	width: 70%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.gestion-container .title {
+    padding: 1em;
+
+}
+
+.gestion-container .gestion {
+    margin: 0;
+    padding: 2.5em;
+}
+
+.main-title > * {
+	background-color: var(--blue-color);
+	color: white;
+	margin: 0;
+}
+
+table .encabezado {
+    color: white;
+    background-color: #39414B;
+}
+
+table .sub-colums {
+    font-size: 15px;
+
+}
+
+
+
+.back-button {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    color: white;
+    background-color: #39414B;
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    font-size: var(--mx);
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+.save-button {
+	margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.save-cancel-bt {
+		align-items: center;
+		color: white;
+		background-color: #39414B;
+		border: none;
+		border-radius: 8px;
+		width: 100%;
+		font-size: var(--mx);
+		font-weight: bold;
+		cursor: pointer;
+		height: 40px;
+}
+
+.solicitar_buscar{
+	color: rgb(255, 255, 255);
+	background-color: #1b2e4b;
+	width: 200px;
+	position: relative;
+	left: 190px;
+	border-radius: 10px;
+
+
+}
+
+.solicitar_cita,  td {
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 80%;
+	text-align: center;
+}
+
+.solicitar_cita td, tr {
+	color: var(--grey-color);
+}
+
+.form-container-citas .solicitar_cita {
+	margin-left: 90px;
+}
+
+.prueba{
+
+
+
+		align-items: center;
+		width: 80%;
+		border: solid 1px black;
+		border-collapse: collapse;
+		padding: 5px;
+		text-align: center;
+
+}
+
+.tablalistadocita{
+	table-layout: fixed;
+	width: 90%;
+	border: solid 1px black;
+	border-collapse: collapse;
+	padding: 5px;
+	text-align: center;
+}
+
+.menuperfilpaciente{
+
+	background-color: #21103a1f;
+
+}
+
+.tablacitasprogramadas{
+	table-layout: fixed;
+	margin-left: 11px;
+	width: 100%;
+	border: solid 1px #000000;
+	border-collapse: collapse;
+	padding: 5px;
+	text-align: right;
+	column-count: 4;
+	column-width: 20px;
+}
+
+.tablacitasprogramadas-2{
+	table-layout: fixed;
+	margin-left: 4px;
+	margin-right: 7px;
+	width: 100%;
+	border: solid 1px #000000;
+	border-collapse: collapse;
+	padding: 5px;
+	text-align: right;
+	column-count: 4;
+	column-width: 20px;
+}
+
+/* Página Perfil Administrador */
+.form-container-administrador {
+	margin: 50px;
+	padding-bottom: 10px;
+    width: 80%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+.form-container-administrador .solicitar_cita tbody {
+	color: var(--grey-color);
+}
+
+.form-container-administrador > * {
+    padding: 1em;
+}
+
+.form-containerAdminIzquierda {
+	text-align: center;
+	width: 75.2%;;
+	margin: 20px;
+	max-width: 700px;
+	float: left;
+	padding: 0px 20px 0 0;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+	justify-items: right;
+}
+.form-containerAdminDerecha {
+	width: 24.8%;;
+	max-width: 185px;
+	margin: 20px;
+	float: right;
+	padding: 0px 20px 0 0;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+	justify-items: center;
+	align-items: center;
+}
+.form-containerAdmin{
+	width: 1000%;;
+	max-width: 900px;
+	float: left;
+	justify-items: right;
+	align-items: center;
+}
+.btn_perfiladmin {
+	align-items: center;
+	background-color: var(--blue-color);
+	border: none;
+	border-radius: 8px;
+	width: 150px;
+	font-size:15px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px;
+	margin: 10px;
+	position: static;
+	left: 60px;
+	border-style: solid;
+}
+
+.letraperfil{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	
+	}
+
+.tamano{
+	
+	width: 400px; 
+	height: 200px;
+    resize: none;
+
+}	
+
+
+
+
+.mensajesR{
+
+
+	background-color: #f50303;
+	color: #ffffff;
+	
+	
+	
+	}
+
+.mensajespag{
+
+
+		background-color: #ffffff;
+		color: #ff0808;
+		font-size: 20px;
+		
+		
+		}	
+.mensajesV{
+
+
+		
+		color: #0dd44f;
+		font-size: 20px;
+		
+		
+		
+		}
+	
+
+.mensajesN{
+	color: #000;
+}	
+
+
+.placeholder{
+
+	color: rgb(9, 9, 172);
+	font-size: 1.5em;	
+
+}
+
+.fecha{
+
+font-size: 20px;
+color: rgb(255, 255, 255);
+background-color: #4478c5;
+
+}
+
+
+/* -------------------------------------------------------- */
+
+.form-containerconozcanoz {
+	margin: 50px;
+    width: 70%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    justify-items: center;
+	color: var(--blue-color);
+}
+
+
+.perfilad{
+
+	font-size: 20px;
+	font-family: 'Times New Roman', Times, serif;
+	background-color: ivory;
+	border-style: inset;
+	padding: 7px;
+	color: white;
+	margin: 80px;
+	
+}
+
+
+.menad{
+
+	
+	text-align: justify;
+	border-radius: 20px;
+}
+
+#div1 {
+	overflow:scroll;
+	height:400px;
+	width:600px;
+}
+#div1 table {
+   width:500px;
+   
+}
+
+div.contenedor.login {
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+.tabl{
+	position: relative;
+	left: -10px;
+	float:right;
+}
+
+.btn_back {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	border-color: rgb(211, 225, 255);
+	background-color: var(--blue-color);
+	height: 40px;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin-left: 75px;
+	margin-bottom: 20px;
+	align-items: center;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	left: -20px;
+}

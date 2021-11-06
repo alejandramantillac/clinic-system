@@ -1,0 +1,127 @@
+{% extends './base.html' %}
+
+
+{% block title %} Perfil De Paciente {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container">
+		<div class="menuizquierda" style="width: 20%; float:left">
+
+			<div>
+				<ul>
+
+					<br>
+					<br>
+					<br>
+					<a href="{{ '/solicitar_cita_medica' }}"><input type="submit" value="Solicitar Cita Médica"
+							class="boton_perfil_usuario"></a>
+					<br>
+					<br>
+					<br>
+					<a href="{{ '/historia_clinica_paciente/' }} {{  [session['id_usuario']] }}"><input type="submit"
+							value="Historial Clinico" class="boton_perfil_usuario"></a>
+					<br>
+					<br>
+					<br>
+					<a href="{{ '/actualizardatospaciente' }} "><input type="submit" value="Actualizar Datos"
+							class="boton_perfil_usuario"></a>
+					<br>
+					<br>
+					<br>
+					<a href="{{ '/consultarcancelarcitas' }} "><input type="submit" value=" Cancelar Citas"
+						class="boton_perfil_usuario"></a>
+					<br>
+					<br>
+					<br>
+					<a href="{{ '/logout' }}"><input type="submit" value="Cerrar Sesión" 
+							style="background-color: rgb(250, 21, 21);" class="boton_perfil_usuario"> </a>
+
+							
+
+				</ul>
+			</div>
+
+		</div>
+
+		<br>
+
+		<div style="width: 69%; float:right">
+			<div class="register">
+				<div class="">
+					<h1 class="title" style="color: var(--blue-color-2)">Perfil Del Paciente </h1>  
+					<br>
+					<br>
+
+
+
+					<form action="/" class="form">
+
+					</form>
+
+					<form action="">
+
+						{% for usu in rows %}
+
+						<p>
+						<h2 style="text-align: justify;" class="letraperfil"> <strong style="color: var(--blue-color-2)">Nombre Del Usuario:</strong> {{
+							usu["nombre"] }}</h2>
+						</p>
+
+						<br>
+						<br>
+
+						<p>
+						<h2 style="text-align: justify;" class="letraperfil"> <strong style="color: var(--blue-color-2)">Número de Documento:</strong> {{
+							usu["numerodocumento"] }}</h2>
+						</p>
+
+						<br>
+						<br>
+
+						<p>
+						<h2 style="text-align: justify;" class="letraperfil"> <strong style="color: var(--blue-color-2)">Correo Electrónico:</strong> {{
+							usu["correo"] }}</h2>
+						</p>
+
+						<br>
+						<br>
+
+						<p>
+						<h2 style="text-align: justify;" class="letraperfil"> <strong style="color: var(--blue-color-2)">Género:</strong> {{ usu["genero"]
+							}}</h2>
+						</p>
+
+						<br>
+						<br>
+
+						<p>
+						<h2 style="text-align: justify;" class="letraperfil"> <strong style="color: var(--blue-color-2)">Dirección De Residencia:</strong> {{
+							usu["direccion"] }}</h2>
+						</p>
+						<br>
+						<br>
+
+						<p>
+						<h2 style="text-align: justify;" class="letraperfil"> <strong style="color: var(--blue-color-2)">Teléfono:</strong> {{
+							usu["telefono"] }}</h2>
+						</p>
+
+						<br>
+						<br>
+
+						<p>
+						<h2 style="text-align: justify;" class="letraperfil"> <strong style="color: var(--blue-color-2)">EPS:</strong> {{ usu["eps"] }}</h2>
+						</p>
+						{% endfor %}
+
+					</form>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends './base.html' %}
+
+
+{% block title %} Pacientes Atendidos {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container-pacientes_atendidos">
+		<div class="titulo_perfil_usuario">
+			<h1>Pacientes Atendidos</h1>
+		</div>
+
+		<br>
+		<!-- ---------------------------------------------------------------------------- -->
+		<table class="tablalistadocita">
+			<thead>
+				<tr>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla">Nombre</h2>
+					</th>
+
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla">Fecha </h2>
+					</th>
+
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla">Motivo Consulta </h2>
+					</th>
+
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla">Diagnostico </h2>
+					</th>
+
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla">comentario Médico </h2>
+					</th>
+
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla">Editar Comentario </h2>
+					</th>
+
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for cita in rows %}
+
+				<tr>
+
+					<td>{{ cita["nombre"] }}</td>
+
+					<td>{{ cita["fecha"] }}</td>
+
+					<td>{{ cita["motivoconsulta"] }}</td>
+
+					<td>{{ cita["diagnostico"] }}</td>
+
+					<td>{{ cita["comentariomedico"] }}</td>
+
+					<td><a href="{{ '/editarcomentario/' }} {{ cita['id_cita'] }}">Ir a editar </a></td>
+
+				</tr>
+
+				{% endfor %}
+		</table>
+		<br>
+		<br>
+		<a href="{{ '/perfil_usuario_medico' }}"><input type="submit" value="Atrás" class="btn_back_pacientes_atendidos"
+				style="width: 100px;"></a>
+	</div>
+</div>
+{% endblock %}

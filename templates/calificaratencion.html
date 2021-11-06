@@ -1,0 +1,54 @@
+{% extends './base.html' %}
+
+
+{% block title %} Calificar Atención{% endblock %}
+
+
+{% block container %}
+
+<div class="" style="background-color: rgb(255, 255, 255);">
+	<div class="form-container-calificar-atencion">
+
+		<div class="titulo_perfil_usuario">
+			<h1>Calificar Atención </h1>
+		</div>
+
+		<form action="" class="" method="post">
+
+			{{ frm.hidden_tag() }}
+
+			<p>
+				{{ frm.calificacion.label }}
+				{{ frm.calificacion }}
+				{% for error in frm.calificacion.errors %}
+			<div>
+				{{ error }}
+			</div>
+			{% endfor %}
+			</p>
+			<br>
+
+			<p>
+
+				{{ frm.calificar }}
+
+				<div class="mensajesV " style="text-align: center;"><strong>{{ mensaje }}</strong></div>
+			</p>
+
+			<br>
+			<br>
+
+		</form>
+
+		<p>
+
+			<a href="{{ '/historia_clinica_paciente/' }} {{  [session['id_usuario']] }}"><input type="submit"
+					value="Atrás" class="btn_back_calificar_atencion" style="width: 100px;"></a>
+
+		</p>
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends './base.html' %}
+
+
+{% block title %} Actualizacion De Datos {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container">
+					<div class="main-title">
+					<h1 class="title">Actualizacion De Datos</h1>
+					</div>
+		<div class="form-container-actualizar-datos-paciente">
+
+
+		<div>
+			<div class="background-clinica">
+				<div >
+					<form action="actualizardatospaciente" class="form" method="post">
+
+						{{ frm.hidden_tag() }}
+
+						<p>
+							{{ frm.tipodocumento.label }}
+							{{ frm.tipodocumento }}
+							{% for error in frm.tipodocumento.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.numerodocumento.label }}
+							{{ frm.numerodocumento }}
+							{% for error in frm.numerodocumento.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.nombre.label }}
+							{{ frm.nombre }}
+							{% for error in frm.nombre.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.correo.label }}
+							{{ frm.correo }}
+							{% for error in frm.correo.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.fechanacimiento.label }}
+							{{ frm.fechanacimiento }}
+							{% for error in frm.fechanacimiento.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.genero.label }}
+							{{ frm.genero }}
+							{% for error in frm.genero.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.direccion.label }}
+							{{ frm.direccion }}
+							{% for error in frm.direccion.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.telefono.label }}
+							{{ frm.telefono }}
+							{% for error in frm.telefono.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.contrasena.label }}
+							{{ frm.contrasena }}
+							{% for error in frm.contrasena.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.eps.label }}
+							{{ frm.eps }}
+							{% for error in frm.eps.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+						<br>
+						<br>	
+						<p>
+							{{ frm.enviar }}
+						</p>
+						<p class="mensajesV">{{ mensaje }}</p>
+
+					</form>
+					</p>
+				</div>
+			</div>
+		</div>			
+		</div>
+		<a href="{{ '/perfil_usuario_paciente' }}"><input type="submit" value="Atrás"
+			class="btn_actualizar_datos_paciente" style="width: 100px;"></a>
+	</div>
+</div>
+{% endblock %}

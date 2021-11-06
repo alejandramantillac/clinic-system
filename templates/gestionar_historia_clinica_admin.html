@@ -1,0 +1,54 @@
+{% extends './base.html' %}
+
+
+{% block title %} Gestión Historia Clínica {% endblock %}
+
+
+{% block container %}
+
+<div class="login">
+	<div class="form-container-gestion-historia-clinica">
+
+		<div class="main-title">
+			<h1 class="title">Gestión Historia Clínica</h1>
+		</div>
+
+		<div class="personal-information">
+			<table class="tablacitasprogramadas-2">
+				<thead>
+					<tr>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">DOCUMENTO PACIENTE</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">PACIENTE</h2>
+						</th>
+						
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">ULTIMA CITA</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">HISTORIA CLINICA</h2>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for historia in rows %}
+					<tr>
+						<td>{{ historia["numerodocumento"] }}</td>
+						<td>{{ historia["nombre"] }}</td>
+						
+						<td>{{ historia["ultimacita"] }}</td>
+						<td><a href="/historia_clinica_paciente_admin/{{ historia['id_paciente'] }}">Historia
+								Clinica</a></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+
+			<a href="{{ '/perfil_admin' }}"><input type="submit" value="Atras" class="btn_perfiladmin"
+					style="width: 100px;"></a>
+		</div>
+	</div>
+</div>
+{% endblock %}

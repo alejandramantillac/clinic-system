@@ -1,0 +1,63 @@
+{% extends './base.html' %}
+
+
+{% block title %} Consultar y Cancelar Citas {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container-historia-clinica">
+		<div class="titulo_perfil_usuario">
+			<h1>Consultar y Cancelar Citas </h1>
+						
+		</div>
+		<h2>El siguiente es el listado de sus citas. Si desea cancelar alguna por favor haga clic en "Cancelar Cita" en la columna operación. </h2>
+
+		<table class="tablalistadocita" style="margin:auto">
+			<thead>
+				<tr>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">FECHA </h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">MÉDICO</h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">DIRECCIÓN</h2>
+					</th>
+					<th class="cabeceratabla">
+						<h2 class="letracabecetabla" style="font-size: 13px;">OPERACIÓN</h2>
+					</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				{% for cita in rows %}
+				<tr>
+					<td> {{ cita["fecha"] }}    </td>
+					<td> {{ cita["nombre"] }}   </td>
+					<td> {{ cita["direccion"]}}  </td>
+					<td> <a href="/cancelarcita/{{ cita['id_cita'] }}">Cancelar cita</a>  </td>
+					
+
+
+					
+				{% endfor %}
+			</tbody>
+		</table>
+		<br>
+		<br>
+		
+		</div>
+		
+		
+		
+
+		<a href="{{ '/perfil_usuario_paciente' }}"><input type="submit" value="Atrás"
+			class="btn_actualizar_datos_paciente" style="width: 200px;"></a>
+
+		
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends './base.html' %}
+
+
+{% block title %} Pacientes Asignados {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container ">
+		<div class="titulo_perfil_usuario">
+			<h1>Pacientes Asignados</h1>
+		</div>
+		<br>
+		<!-- ---------------------------------------------------------------------------- -->
+		<div class="form-container-pacientes-asignados">
+			<table class="tablalistadocita">
+
+				<thead>
+					<tr>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">Fecha</h2>
+						</th>
+
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">Nombre</h2>
+						</th>
+
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">Historial Clinico </h2>
+						</th>
+
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla">Atender </h2>
+						</th>
+
+					</tr>
+				</thead>
+
+				<tbody>
+
+					{% for cita in rows %}
+
+					<tr>
+
+						<td>{{ cita["fecha"] }}</td>
+
+						<td>{{ cita["nombre"] }}</td>
+
+						<td><a href="/historial_clinico_medico/{{ cita['id_paciente'] }}">Ver Más </a></td>
+
+						<td><a href="/nuevaconsulta/{{ cita['id_cita'] }}">Nueva Consulta </a></td>
+
+					</tr>
+					{% endfor %}
+
+				</tbody>
+
+			</table>
+
+			<br>
+			<br>
+			<a href="{{ '/perfil_usuario_medico' }}"><input type="submit" value="Atrás"
+					class="btn_back_pacientes_asignados" style="width: 100px;"></a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

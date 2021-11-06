@@ -1,0 +1,64 @@
+{% extends './base.html' %}
+
+
+{% block title %} Gestión Citas Medicas {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container">
+		<div class="titulo_perfil_usuario">
+			<h1>Gestión Citas Medicas (Administrador)</h1>
+		</div>
+		<div class="form-containerAdmin" style="text-align: center;">
+			<h1></h1>
+			<table class="tablacitasprogramadas" style="margin: 10px">
+				<thead>
+					<tr>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">FECHA</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">HORA</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">DOCUMENTO PACIENTE</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">PACIENTE</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">MEDICO</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">ESTADO</h2>
+						</th>
+						<th class="cabeceratabla">
+							<h2 class="letracabecetabla" style="font-size: 13px;">calificación</h2>
+						</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{% for cita in rows %}
+					<tr>
+						<td>{{ cita["fecha"] }}</td>
+						<td>{{ cita["hora"] }}</td>
+						<td>{{ cita["numerodocumento"] }}</td>
+						<td>{{ cita["pacien"] }}</td>
+						<td>{{ cita["medi"] }}</td>
+						<td>{{ cita["estado"] }}</td>
+						<td>{{ cita["calificacion"] }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<a href="{{ '/perfil_admin' }}"><input type="submit" value="Atrás" class="btn_perfiladmin"
+					style="width: 100px;"></a>
+		</div>
+	</div>
+	<br>
+	<br>
+</div>
+{% endblock %}

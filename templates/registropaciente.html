@@ -1,0 +1,137 @@
+{% extends './base.html' %}
+
+
+{% block title %} Registro {% endblock %}
+
+
+{% block container %}
+
+<div class="register"> 
+    <div class="form-container-register">
+        <div class="main-title">
+            <h1 class="title">Regístrate</h1>
+        </div>
+        <form action="" class="form" method="POST">
+
+            {{ frm.hidden_tag() }}
+
+            <div class="contenedor-register-p">
+                <p>
+                    {{ frm.tipodocumento.label }}
+                    {{ frm.tipodocumento }}
+                    {% for error in frm.tipodocumento.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+
+                <p>
+                    {{ frm.numerodocumento.label }}
+                    {{ frm.numerodocumento }}
+                    {% for error in frm.numerodocumento.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+
+
+                <p>
+                    {{ frm.nombre.label }}
+                    {{ frm.nombre }}
+                    {% for error in frm.nombre.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+                <p>
+                    {{ frm.correo.label }}
+                    {{ frm.correo }}
+                    {% for error in frm.correo.errors %}  
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+
+
+                <p>
+                    {{ frm.fechanacimiento.label }}
+                    {{ frm.fechanacimiento }}
+                    {% for error in frm.fechanacimiento.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+                <p>
+                    {{ frm.genero.label }}
+                    {{ frm.genero }}
+                    {% for error in frm.genero.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+                <p>
+                    {{ frm.direccion.label }}
+                    {{ frm.direccion }}
+                    {% for error in frm.direccion.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+                <p>
+                    {{ frm.telefono.label }}
+                    {{ frm.telefono }}
+                    {% for error in frm.telefono.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+
+                <p>
+                    {{ frm.contrasena.label }}
+                    {{ frm.contrasena }}
+                    {% for error in frm.contrasena.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+
+                <p>
+                    {{ frm.eps.label }}
+                    {{ frm.eps }}
+                    {% for error in frm.eps.errors %}
+                <div>
+                    {{ error }}
+                </div>
+                {% endfor %}
+                </p>
+                <br>
+            </div>
+            {{ frm.enviar }}
+
+            <p class="mensajesv" ><strong>{{ mensaje }}</strong></p>
+
+        </form>
+        <a href="javascript: history.go(-1)"><input type="submit" value="Atras" class="btn_back"
+                style="width: 100px;"></a>
+
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends './base.html' %}
+
+
+{% block title %} Actulaizar Datos Médico {% endblock %}
+
+
+{% block container %}
+
+<div class="fondo">
+	<div class="form-container">
+
+		<div class="menuizquierda" style="width: 20%; float:left">
+
+			<div>
+				<ul>
+					<a href="{{ '/pacientes_asignados' }}"><input type="submit" value="Pacientes Asignados"
+							class="boton_perfil_usuario"></a>
+
+					<br>
+					<br>
+					<br>
+					<a href="{{ '/crearcitas' }}"><input type="submit" value="Crear Cita"
+							class="boton_perfil_usuario"></a>
+					<br>
+					<br>
+					<br>
+					<a href="{{ '/pacientes_atendidos' }}"><input type="submit" value=" Pacientes Atendidos"
+							class="boton_perfil_usuario"></a>
+
+					
+
+				<br>
+				<br>
+				<br>
+					<a href="{{ '/logout' }}"><input type="submit" value="Cerrar Sesión"
+							style="background-color: rgb(206, 132, 132);" class="boton_perfil_usuario"></a>
+
+				</ul>
+			</div>
+		</div>
+
+		<br>
+
+		<div style="width: 69%; float:right">
+			<div class="register">
+				<div class=>
+					<h1 class="title" style="color: black;">Actualizar Datos Médico </h1>
+
+					
+
+					
+
+					<form action="" class="form" method="post">
+
+						{{ frm.hidden_tag() }}
+
+						<p>
+							{{ frm.tipodocumento.label }}
+							{{ frm.tipodocumento }}
+							{% for error in frm.tipodocumento.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.numerodocumento.label }}
+							{{ frm.numerodocumento }}
+							{% for error in frm.numerodocumento.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.nombre.label }}
+							{{ frm.nombre }}
+							{% for error in frm.nombre.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.correo.label }}
+							{{ frm.correo }}
+							{% for error in frm.correo.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.fechanacimiento.label }}
+							{{ frm.fechanacimiento }}
+							{% for error in frm.fechanacimiento.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.genero.label }}
+							{{ frm.genero }}
+							{% for error in frm.genero.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.direccion.label }}
+							{{ frm.direccion }}
+							{% for error in frm.direccion.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.telefono.label }}
+							{{ frm.telefono }}
+							{% for error in frm.telefono.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.contrasena.label }}
+							{{ frm.contrasena }}
+							{% for error in frm.contrasena.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+
+						<p>
+							{{ frm.especialidad.label }}
+							{{ frm.especialidad }}
+							{% for error in frm.especialidad.errors %}
+						<div>
+							{{ error }}
+						</div>
+						{% endfor %}
+						</p>
+						<br>
+						<br>
+						<br>
+						<p  >{{ frm.enviar }} </p>
+						<p class="mensajesV">{{ mensaje }}</p>
+
+					</form>
+
+					
+					</p>
+				</div>
+				<a href="{{ '/perfil_usuario_medico' }}"><input type="submit" value="Atrás"
+					class="btn_actualizar_datos_paciente" style="width: 200px;"></a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

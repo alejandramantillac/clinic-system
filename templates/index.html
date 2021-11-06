@@ -1,0 +1,39 @@
+{% extends './base.html' %}
+
+
+{% block title %} HOME {% endblock %}
+
+
+{% block container %}
+
+<div class="bodyhome">
+	<div class="form-container">
+		
+
+		<div class="first-title">
+			<h1 class="title">BIENVENIDOS A LA CLÍNICA GENERAL DEL NORTE</h1>
+
+			<h1 class="title">Seleccione la opción que desee:</h1>
+		</div>
+		<p>
+			<a href="{{ 'login' }}"> <img src="{{ '/static/images/iniciarsesion.png' }}" width="230px" HSPACE="80"
+					alt=""> </a>
+
+			<a href="{{ 'registropaciente' }}"><img src="{{ '/static/images/registrarse.png' }}" width="230px" alt="">
+			</a>
+		</p>
+		<br>
+		<br>
+		<p>
+			<a href="{{ 'conozcanos' }}"><img src="{{ '/static/images/conocenos.png' }}" width="230px" HSPACE="80"
+					alt=""> </a>
+
+			<a href="{{ 'contactenos' }}"><img src="{{ '/static/images/contactanos.png' }}" width="230px" alt=""> </a>
+		</p>
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+
+{% endblock %}
